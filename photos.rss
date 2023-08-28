@@ -1,0 +1,34 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+ <title>{{ site.title }}</title>
+ <description>{{ site.description }}</description>
+ <link>{{ site.url }}</link>
+ <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+ <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+{%- for image in site.static_files reversed -%}
+{%- if image.path contains 'fulls' -%}
+ <item>
+    {% assign title = false %}
+    {%- for tfile in site.static_files reversed -%}
+        {%- if tfile.path contains 'texts' -%}
+            {%- if tfile.path contains image.basename -%}
+                {%- assign title = true -%}
+                <title>{% include_relative /images/texts/{{ tfile.name }} %}</title>
+            {%- endif -%}
+        {%- endif -%}
+    {%- endfor -%}
+    {%- if title != true -%}
+        <title>{{ image.name }}</title>
+    {%- endif -%}
+  <link>{{ site.url }}/{{ site.image_fulls_loc }}/{{ image.name }}</link>
+  <guid isPermaLink="true">{{ site.url }}/{{ site.image_fulls_loc }}/{{ image.name }}</guid>
+  <pubDate>{{ image.date | date_to_rfc822 }}</pubDate>
+ </item>
+{% endif %}
+{%- endfor -%}
+</channel>
+</rss>

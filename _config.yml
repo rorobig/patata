@@ -1,0 +1,37 @@
+# Base configs
+# url: "https://photography.purinis.lt" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/"
+# image_fulls_loc: "images/fulls"
+# image_thumbs_loc: "images/thumbs"
+#google_analytics: "UA-46465113-2"
+
+
+# Base configs
+baseurl: "https://rorobig.github.io/patata/"
+image_fulls_loc: "/images/fulls"
+image_thumbs_loc: "/images/thumbs"
+google_analytics-1: "G-RTBXBJXLQ9" 
+google_analytics: "UA-229153844-2"
+
+
+
+
+# UI configs
+title: "Photography by Rocheandley Kwidama"
+subtitle: "See the world through my eyes!"
+author: "Rocheandley Kwidama"
+header:
+ title: "Photography"
+ subtitle: "by Rocheandley Kwidama"
+footer:
+ name: "Anyong haseyo, my name is Roro"
+ bio: "Camara: Canon EOS 2000D + EF-S 18-55mm and EF 75-300mm."
+ github: "https://www.github.com/rorobig"
+ funfact: "Fun fact: Patata is a traditional way spanish people say 'cheeese' when taking pictures."
+web_design: "rk"
+social_urls:
+  facebook: "https://www.facebook.com/rocheandley.kwidama"
+  twitter: "https://www.twitter.com/Walking_dolphin"
+  instagram: "https://www.instagram.com/skittlesmclovingit"
+  linkedin: "https://in.linkedin.com/in/rocheandley-kwidama"
+  github: "https://www.github.com/rorobig"
